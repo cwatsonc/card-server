@@ -31,8 +31,7 @@ function arrShuffle(a) {
 
 
 var SUIT = ["diamond","club","heart","spade"]
-var RANK = ["A","7","8","9","10","J","Q","K"]
-//var RANK = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+var RANK = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
 var SYMBOLS = {diamond:"♦",club:"♣",heart:"♥",spade:"♠"}
 var COLORS = {diamond:"red",club:"black",heart:"red",spade:"black"}
 var cards = [];
@@ -49,7 +48,7 @@ function newDeck() {
 
   var deck = []
   for (var i = 0; i < 4; i++){
-    for (var j = 0; j < 8; j++){
+    for (var j = 0; j < 13; j++){
       deck.push({
         suit:SUIT[i], 
         rank:RANK[j], 
@@ -63,9 +62,9 @@ function newDeck() {
   deck.push({suit:"red",rank:"joker", 
              x:0, y:0, z:0, resolve_dl: 0,
              targ: {x:0,y:0}});
-  // deck.push({suit:"black",rank:"joker",
-  //            x: 0, y: 0, z:0, resolve_dl: 0,
-  //            targ: {x:0,y:0}});
+  deck.push({suit:"black",rank:"joker",
+             x: 0, y: 0, z:0, resolve_dl: 0,
+             targ: {x:0,y:0}});
   function makeId(card){
     return card.suit+"-"+card.rank+"-"+randId();
   }
@@ -100,7 +99,7 @@ function getCardById(cards,id){
 
 var express = require('express'); 
 var app = express();
-var server = app.listen(process.env.PORT || 300);
+var server = app.listen(proce it ss.env.PORT || 300);
 app.use(express.static('public'));
 console.log('server running')
 
@@ -108,7 +107,7 @@ var io = require('socket.io')(server);
 
 
 var welcome_messages = [
-  "holy-pinto-gruyere.glitch.me",
+  "welcome to card-table.glitch.me",
   "where multiple persons can mess around with the same deck of cards online",
   "click and drag on a card to move it, or drag a selection to move multiple cards",
   // "create or go to a room by appending <code>?room=</code> to the URL, or click on one of the suggested links in the <b>Rooms</b> panel",
