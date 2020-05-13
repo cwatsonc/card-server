@@ -126,7 +126,7 @@ function renderCards(){
     var issel = mouseSel.cards.indexOf(cards[i]) != -1
     
     if (mouseDownInfo.state != "single" && issel){
-      set_class += " card-sel";
+      set_class += " card-sel-vert";
     }
     
     var moving = ((mouseDownInfo.state == "multimove" || mouseDownInfo.state == "single") && issel);
