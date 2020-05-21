@@ -108,9 +108,9 @@ var io = require('socket.io')(server);
 
 
 var welcome_messages = [
-  "welcome to card-table.glitch.me",
+  "welcome to card-server",
   "where multiple persons can mess around with the same deck of cards online",
-  "click and drag on a card to move it, or drag a selection to move multiple cards",
+  "click and drag on a card to move it, or click and drag a selection to move multiple cards",
   // "create or go to a room by appending <code>?room=</code> to the URL, or click on one of the suggested links in the <b>Rooms</b> panel",
   "share the URL with your friends to invite them to your room",
 ]
